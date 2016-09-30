@@ -1,0 +1,13 @@
+file="node_modules"
+if [ ! -d "$file" ]; then
+        echo "try to copy $file to here"
+        cp -r ../../../gears/$file .
+fi
+
+file="awsdynamodbutil.js"
+if [ ! -f "$file" ]; then
+        echo "try to copy $file to here"
+        cp -r ../../../gears/$file .
+fi
+
+lambda-local -l index.js -h handler -e ./event-samples/s3-put.js -c
