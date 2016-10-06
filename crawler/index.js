@@ -10,6 +10,7 @@ var crawler_movie_list = require('./crawler_movie_list.js');
 var response;
 var api_resource = 'localhost';
 var port = 1338;
+
 http.createServer( function(req, res) {
 
   response = res;
